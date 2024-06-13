@@ -1,4 +1,7 @@
-Solution for [this Kata.](https://www.codewars.com/kata/525caa5c1bf619d28c000335)
+https://github.com/brunodeangelis/tic-tac-toe/assets/41843151/bb66328d-1e9e-4ed0-a439-ba9a9e5cbbe8
+
+
+Solution for [this Kata](https://www.codewars.com/kata/525caa5c1bf619d28c000335), but turned into a little game.
 
 > _If we were to set up a Tic-Tac-Toe game, we would want to know whether the board's current state is solved,
 > wouldn't we? Our goal is to create a function that will check that for us!_
