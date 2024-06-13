@@ -55,9 +55,6 @@ main :: proc() {
     target_rt := rl.LoadRenderTexture(WINDOW_SIZE, WINDOW_SIZE)
     rl.SetTextureFilter(target_rt.texture, .ANISOTROPIC_16X)
 
-    // draw_x_sounds: []rl.Sound = {rl.LoadSound(""), rl.LoadSound(""), rl.LoadSound("")}
-    // draw_o_sounds: []rl.Sound = {rl.LoadSound(""), rl.LoadSound(""), rl.LoadSound("")}
-
     for !rl.WindowShouldClose() {
         delta := rl.GetFrameTime()
 
@@ -156,6 +153,8 @@ main :: proc() {
 
                 camera.rotation = linalg.lerp(camera.rotation, 15, t)
                 camera.target = linalg.lerp(camera.target, strikethrough_positions[1], t)
+
+                blur_intensity += delta
 
                 rl.DrawLineEx(
                     strikethrough_positions[0],
@@ -318,4 +317,5 @@ reset_game :: proc() {
     placing_sign = .X
     camera = initial_camera
     victory_anim_progress = 0
+    blur_intensity = 0
 }
